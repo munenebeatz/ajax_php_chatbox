@@ -1,5 +1,13 @@
 <?php
 	require "inc/db.php";
+
+	//fetch existing shouts
+	$query = "SELECT * FROM shouts ORDER BY id DESC";
+	$result = $db_conn->query($query);
+	if(!$result){
+		echo "ERROR: ".$db_conn->error;
+		die();
+	}
 ?>
 <html>
 <head>
@@ -16,7 +24,13 @@
 		</header>
 		<div id="shouts">
 			<ul>
-				<li></li>
+				<?php
+				    while($shout = $result->fetch_object()):
+					    echo "<li>$shout->name : $shout->shout [$shout->date]</li>";
+				?>
+				<?php
+				    endwhile;
+				?>
 			</ul>
 		</div>
 		<footer>

@@ -12,7 +12,7 @@ body{
 .container{
     width: 700px;
     margin: 40px auto;
-    overflow: auto;
+
     border: 1px solid #ccc;
 }
 
@@ -27,6 +27,7 @@ header{
     height: 200px;
     border: 1px solid #333;
     margin: 30px;
+    overflow: auto;
     padding: 15px;
 }
 
