@@ -1,3 +1,6 @@
+<?php
+	require "inc/db.php";
+?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -9,9 +12,7 @@
 	<div class="container">
 		<header>
 			<h1>JS Shoutbox</h1>
-			<?php
-			    require "inc/db.php";
-			?>
+
 		</header>
 		<div id="shouts">
 			<ul>
